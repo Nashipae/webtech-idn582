@@ -1,0 +1,49 @@
+body {
+  background-color: lightblue;
+}
+
+hr {
+  border-color: black;
+}
+
+fieldset {
+  border-color: black;
+}
+
+legend {
+  font-size: 18px;
+}
+
+textarea{
+  background-color: #E8E8E8;
+}
+
+input[type=submit]{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+
+input[type=text]{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+
+input[type=password]{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+
+input[type=email]{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+
+input[type=date]{
+  border-color: black;
+  background-color: white;
+  color: black;
+}

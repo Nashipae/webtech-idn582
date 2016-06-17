@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' type='text/css' href='main.css' />
+  </head>
+  <body>
+    <form method='POST' action='signup.php'>
+      <fieldset>
+        <legend>Sign Up</legend>
+
+        <label for='username'>Username:</label> <br />
+        <input type='text' name='username' maxlength='255' required/> <br /> <br />
+
+        <label for='password'>Password:</label> <br />
+        <input type='password' name='password' requIred /> <br /> <br />
+
+        <label for='name'>Name:</label> <br />
+        <input type='text' name='name' maxlength='255' required/> <br /> <br />
+
+        <label for='email'>Email:</label> <br />
+        <input type='email' name='email' required /> <br /> <br />
+
+        <label for='dob'>Date of Birth:</label> <br />
+        <input type='date' name='dob' required/> <br /> <br />
+
+        <label for='gender'>Gender:</label> <br />
+        <input type='radio' name='gender' value='male' /> Male <br />
+        <input type='radio' name='gender' value='female' / > Female <br />
+        <input type='radio' name='gender' value='default' checked='checked' /> Default <br /> <br />
+
+        <label for='question'>What is your favorite animal?</label> <br />
+        <input type='hidden' name='question' value='What is your favorite animal?' />
+        <input type='text' name='answer' maxlength='255' required/> <br /> <br />
+
+        <label for='location'>Location:</label> <br />
+        <input type='text' name='location' maxlength='255' required /> <br /> <br />
+
+        <label for='pic'>Profile Picture</label> <br />
+        <input type='text' name='pic' maxlength='255' required /> <br /> <br />
+
+        <input type='submit' value='Sign Up' />
+      </fieldset>
+    </form>
+  </body>
+</html>
