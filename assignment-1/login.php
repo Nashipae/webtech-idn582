@@ -7,9 +7,14 @@
 
 	$conn = connect_db();
 
+	//added the functions to sanitize user input that is submitted
+	//on the login page.
 	$username = sanitizeString($conn, $_POST["username"]);
  	$password = sanitizeString($conn, $_POST["password"]);
 
+	//Because the password is saved as a hash the user inputted password
+	//must also be hashed before the query to ensure that the
+	//user is authenticated correctly.
 	$password = md5($password);
 
 	$result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
@@ -26,5 +31,6 @@
 		//else ask to login again..
 		mysqli_close($conn);
 		echo "Invalid password! Try again!";
+		header('Location: login.html');
 	}
 ?>

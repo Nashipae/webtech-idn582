@@ -10,6 +10,7 @@
 
 	$conn = connect_db();
 
+	//input is sanitized before being inserted into the database
 	$content = sanitizeString($conn, $_POST['content']);
 	$UID = sanitizeString($conn, $_POST['UID']);
 

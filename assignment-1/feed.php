@@ -43,9 +43,8 @@
 			for($i = 0; $i < $num_of_rows; $i++){
 				$row = mysqli_fetch_row($result_posts);
 				echo "<fieldset>";
-				echo "<legend>Post by $row[3]</legend>";
+				echo "<legend><img height='100' width='100' src='$row[4]' /> <br /> Post by $row[3] <br /></legend>";
 				echo "<p>$row[1]</p>";
-				echo "<hr style='border-color:gray' />";
 				$date = date('m/d/Y h:i A', strtotime($row[6]));
 				echo "<p>Likes: $row[5]</p> <p>$date</p>";
 				echo "<form action='likes.php' method='POST'> <input type='hidden' name='PID' value='$row[0]'> <input type='submit' value='Like'></form> <br />";
@@ -59,7 +58,8 @@
 
 				$result_comments = mysqli_query($conn, "SELECT * FROM comments where post_id='$row[0]'");
 				$num_rows_2 = mysqli_num_rows($result_comments);
-
+				
+				// all of the comments for a given post are displayed under the post
 				for($j = 0; $j < $num_rows_2; $j++){
 						$row2 = mysqli_fetch_row($result_comments);
 						echo "<fieldset>";
