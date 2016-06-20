@@ -26,11 +26,11 @@
 
   //check to determine if a username email or name has been
   //previously inserted into the database
-  $result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' OR email='$email' or name='$name'");
+  $result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' OR email='$email'");
 	$num_of_rows = mysqli_num_rows($result);
 
   if( $num_of_rows > 0){
-    echo "Username Email or Name are already taken";
+    echo "Username or Email are already taken";
     exit();
   }
 

@@ -24,7 +24,7 @@
 			echo "<img height='250' width='300' src='".$row['profile_pic']."'>";
 			echo "<hr>";
 			echo "<h2>Make A Post</h2>";
-	  	echo "<form method='POST' action='posts.php'>";
+			echo "<form method='POST' action='posts.php'>";
 			echo "<p><textarea rows='10' cols='50' name='content' placeholder='Whats on your mind?'></textarea></p>";
 			echo "<input type='hidden' name='UID' value='$row[id]'>";
 			echo "<p><input type='submit'></p>";
@@ -34,7 +34,7 @@
 			$UID = $row['id'];
 			$name = $row['Name'];
 
-	  	$result_posts = mysqli_query($conn, "SELECT * FROM posts");
+			$result_posts = mysqli_query($conn, "SELECT * FROM posts");
 			$num_of_rows = mysqli_num_rows($result_posts);
 			echo "<hr />";
 	  	echo "<h2>My Feed</h2>";
@@ -58,7 +58,7 @@
 
 				$result_comments = mysqli_query($conn, "SELECT * FROM comments where post_id='$row[0]'");
 				$num_rows_2 = mysqli_num_rows($result_comments);
-				
+
 				// all of the comments for a given post are displayed under the post
 				for($j = 0; $j < $num_rows_2; $j++){
 						$row2 = mysqli_fetch_row($result_comments);
